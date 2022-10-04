@@ -1,0 +1,178 @@
+:root {
+  /* Variables*/
+  --blue: rgb(91, 91, 255);
+  --avatar-size: 1.5rem;
+}
+body,
+html {
+  margin: 0;
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+}
+
+/* Grid Placement View*/
+.view {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 8fr;
+  grid-template-areas:
+    "title searchbar"
+    "dashboard welcome-box"
+    "dashboard content-container";
+  height: 100vh;
+}
+.title {
+  grid-area: title;
+}
+.searchbar {
+  grid-area: searchbar;
+}
+.dashboard {
+  grid-area: dashboard;
+}
+.welcome-box {
+  grid-area: welcome-box;
+}
+.content-container {
+  grid-area: content-container;
+}
+/* Grid Dashboard */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr) 2fr repeat(3, 1fr);
+}
+/* Grid Project-container */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+/* Grid Content-container*/
+.content-container {
+  display: grid;
+  grid-template-rows: min-content min-content min-content min-content;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "your-projects announce"
+    "projects announcements"
+    "projects trend"
+    "projects trending";
+  gap: 15px;
+}
+#your-projects {
+  grid-area: your-projects;
+}
+.projects {
+  grid-area: projects;
+}
+#announcements {
+  grid-area: announce;
+}
+.announcements {
+  grid-area: announcements;
+}
+#trending {
+  grid-area: trend;
+}
+.trending {
+  grid-area: trending;
+}
+/* Grid Welcome-box */
+.welcome-box {
+  display: grid;
+  grid-template-columns: 1fr 5fr 3fr;
+  gap: 10px;
+}
+/* Grid Searchbar */
+.searchbar {
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr 2fr 4fr;
+}
+
+/* Making things look nice */
+.dashboard,
+.title {
+  background: var(--blue);
+}
+button {
+  background: var(--blue);
+  border-radius: 20%;
+  color: white;
+}
+.project p {
+  font-size: small;
+  overflow: hidden;
+}
+.announcements p,
+.trending p {
+  font-size: x-small;
+  overflow: hidden;
+}
+.content-container {
+  background: lightgray;
+  padding: 15px;
+}
+.project,
+.announcements,
+.trending {
+  background-color: white;
+  border-radius: 5%;
+  padding: 5px;
+}
+h3,
+h4,
+h5 {
+  margin-bottom: 0;
+}
+p {
+  margin-top: 0;
+}
+.small img,
+.large img {
+  height: auto;
+  border-radius: 50%;
+}
+.small img {
+  width: var(--avatar-size);
+}
+.large img {
+  width: calc(2 * var(--avatar-size));
+}
+
+/* Symbols */
+#title::before {
+  content: "📅";
+}
+.home::before {
+  content: "🏠";
+}
+.profile::before {
+  content: "🧑";
+}
+.messages::before {
+  content: "💬";
+}
+.history::before {
+  content: "🧾";
+}
+.tasks::before {
+  content: "📑";
+}
+.communities::before {
+  content: "👬";
+}
+.settings::before {
+  content: "🔧";
+}
+.support::before {
+  content: "📞";
+}
+.privacy::before {
+  content: "🐱‍👤";
+}
+.magnifying-glass::before {
+  content: "🔍";
+}

@@ -8,161 +8,192 @@
     <title>Admin page</title>
   </head>
   <body>
-    <div class="header">
-      <div class="title">Dashboard</div>
+    <div class="view">
+      <div class="title"><h2 id="title">Dashboard</h2></div>
       <div class="searchbar">
         <div class="magnifying-glass"></div>
         <input type="search" name="search" id="search" />
         <div class="bell"></div>
-        <div class="avatar-small"></div>
+        <div class="avatar small">
+          <img src="./julian-wan-WNoLnJo7tS8-unsplash.jpg" alt="avatar photo" />
+        </div>
         <div class="profile-name">Christian LastName</div>
       </div>
       <div class="welcome-box">
-        <div class="avatar-large"></div>
+        <div class="avatar large">
+          <img src="./julian-wan-WNoLnJo7tS8-unsplash.jpg" alt="avatar photo" />
+        </div>
         <div class="welcome-message">
           <p>Hi there,</p>
           <p>Christian LastName (@christian)</p>
         </div>
-        <button>New</button>
-        <button>Upload</button>
-        <button>Share</button>
-      </div>
-    </div>
-    <div class="dashboard">
-      <div class="home">Home</div>
-      <div class="profile">Profile</div>
-      <div class="Messages"></div>
-      <div class="history">History</div>
-      <div class="tasks">Tasks</div>
-      <div class="communities">Communities</div>
-      <div class="settings">Settings</div>
-      <div class="support">Support</div>
-      <div class="privacy">Privacy</div>
-    </div>
-    <div class="content-container">
-      <div class="projects">
-        <div class="project-card">
-          <div class="yellow-line"></div>
-          <h3>Project Name 1</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-            suscipit dicta adipisci quis. Unde deserunt explicabo modi magnam
-            hic voluptates veritatis nesciunt. Corrupti repellendus impedit
-            laborum nam molestias itaque nesciunt!
-          </p>
-          <div class="buttons"></div>
-        </div>
-        <div class="project-card">
-          <div class="yellow-line"></div>
-          <h3>Project Name 2</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam,
-            dolores. Explicabo molestiae dicta aliquid laborum enim quis
-            aspernatur nulla nostrum adipisci a quasi, soluta temporibus, vitae
-            fugit, veniam modi mollitia.
-          </p>
-        </div>
-        <div class="project-card">
-          <div class="yellow-line"></div>
-          <h3>Project Name 3</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
-            dicta tenetur amet ut labore recusandae distinctio quaerat quae.
-            Nulla cupiditate aliquid, autem et sunt impedit tempora dignissimos
-            eveniet enim sed.
-          </p>
-          <div class="buttons"></div>
-        </div>
-        <div class="project-card">
-          <div class="yellow-line"></div>
-          <h3>Project Name 4</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
-            laborum temporibus cum sequi sunt doloribus sit odit voluptate?
-            Repellendus distinctio perspiciatis, quia placeat expedita rem porro
-            repellat voluptate vitae assumenda.
-          </p>
-          <div class="buttons"></div>
-        </div>
-        <div class="project-card">
-          <div class="yellow-line"></div>
-          <h3>Project Name 5</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            eum, aliquid tenetur, neque sunt omnis iusto error, pariatur ullam
-            asperiores vitae necessitatibus. Consequuntur accusantium ipsa magni
-            sed optio vero aspernatur?
-          </p>
-          <div class="buttons"></div>
-        </div>
-        <div class="project-card">
-          <div class="yellow-line"></div>
-          <h3>Project Name 6</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dicta
-            exercitationem, modi recusandae explicabo tempora tempore dolorum
-            quidem magni, accusantium sapiente? Consequatur neque dignissimos
-            error rerum quos, consectetur distinctio optio!
-          </p>
-          <div class="buttons"></div>
+        <div class="buttons">
+          <button>New</button>
+          <button>Upload</button>
+          <button>Share</button>
         </div>
       </div>
-      <div class="announcements">
-        <div class="announce-card">
-          <h3>Site Maintenance</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est harum,
-            ea magni rerum quibusdam veniam quisquam autem ipsa odit quas
-            impedit iusto fuga, inventore possimus non sed quo blanditiis
-            repellendus.
-          </p>
-        </div>
-        <div class="announce-card">
-          <h3>Community Share Day</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est harum,
-            ea magni rerum quibusdam veniam quisquam autem ipsa odit quas
-            impedit iusto fuga, inventore possimus non sed quo blanditiis
-            repellendus.
-          </p>
-        </div>
-        <div class="announce-card">
-          <h3>Updated Privacy Policy</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est harum,
-            ea magni rerum quibusdam veniam quisquam autem ipsa odit quas
-            impedit iusto fuga, inventore possimus non sed quo blanditiis
-            repellendus.
-          </p>
-        </div>
+      <div class="dashboard">
+        <div class="home">Home</div>
+        <div class="profile">Profile</div>
+        <div class="messages">Messages</div>
+        <div class="history">History</div>
+        <div class="tasks">Tasks</div>
+        <div class="communities">Communities</div>
+        <div class="settings">Settings</div>
+        <div class="support">Support</div>
+        <div class="privacy">Privacy</div>
       </div>
-      <div class="trending">
-        <div class="trending-card">
-          <div class="avatar"></div>
-          <div class="avatar-text">
-            <div class="username"></div>
-            <div class="name"></div>
+      <div class="content-container">
+        <h3 id="your-projects">Your Projects</h3>
+        <div class="projects">
+          <div class="project-container">
+            <div class="project card">
+              <div class="yellow-line"></div>
+              <h4>Project Name 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+                suscipit dicta adipisci quis. Unde deserunt explicabo modi
+                magnam hic voluptates veritatis nesciunt. Corrupti repellendus
+                impedit laborum nam molestias itaque nesciunt!
+              </p>
+              <div class="buttons"></div>
+            </div>
+            <div class="project card">
+              <div class="yellow-line"></div>
+              <h4>Project Name 2</h4>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quibusdam, dolores. Explicabo molestiae dicta aliquid laborum
+                enim quis aspernatur nulla nostrum adipisci a quasi, soluta
+                temporibus, vitae fugit, veniam modi mollitia.
+              </p>
+            </div>
+            <div class="project card">
+              <div class="yellow-line"></div>
+              <h4>Project Name 3</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+                dicta tenetur amet ut labore recusandae distinctio quaerat quae.
+                Nulla cupiditate aliquid, autem et sunt impedit tempora
+                dignissimos eveniet enim sed.
+              </p>
+              <div class="buttons"></div>
+            </div>
+            <div class="project card">
+              <div class="yellow-line"></div>
+              <h4>Project Name 4</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Provident laborum temporibus cum sequi sunt doloribus sit odit
+                voluptate? Repellendus distinctio perspiciatis, quia placeat
+                expedita rem porro repellat voluptate vitae assumenda.
+              </p>
+              <div class="buttons"></div>
+            </div>
+            <div class="project card">
+              <div class="yellow-line"></div>
+              <h4>Project Name 5</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit eum, aliquid tenetur, neque sunt omnis iusto error,
+                pariatur ullam asperiores vitae necessitatibus. Consequuntur
+                accusantium ipsa magni sed optio vero aspernatur?
+              </p>
+              <div class="buttons"></div>
+            </div>
+            <div class="project card">
+              <div class="yellow-line"></div>
+              <h4>Project Name 6</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
+                dicta exercitationem, modi recusandae explicabo tempora tempore
+                dolorum quidem magni, accusantium sapiente? Consequatur neque
+                dignissimos error rerum quos, consectetur distinctio optio!
+              </p>
+              <div class="buttons"></div>
+            </div>
           </div>
         </div>
-        <div class="trending-card">
-          <div class="avatar"></div>
-          <div class="avatar-text">
-            <div class="username"></div>
-            <div class="name"></div>
+        <h3 id="announcements">Announcements</h3>
+        <div class="announcements">
+          <div class="announce card">
+            <h5>Site Maintenance</h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
+              harum, ea magni rerum quibusdam veniam quisquam autem ipsa odit
+              quas impedit iusto fuga, inventore possimus non sed quo blanditiis
+              repellendus.
+            </p>
+          </div>
+          <div class="announce card">
+            <h5>Community Share Day</h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
+              harum, ea magni rerum quibusdam veniam quisquam autem ipsa odit
+              quas impedit iusto fuga, inventore possimus non sed quo blanditiis
+              repellendus.
+            </p>
+          </div>
+          <div class="announce card">
+            <h5>Updated Privacy Policy</h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
+              harum, ea magni rerum quibusdam veniam quisquam autem ipsa odit
+              quas impedit iusto fuga, inventore possimus non sed quo blanditiis
+              repellendus.
+            </p>
           </div>
         </div>
-        <div class="trending-card">
-          <div class="avatar"></div>
-          <div class="avatar-text">
-            <div class="username"></div>
-            <div class="name"></div>
+        <h3 id="trending">Trending</h3>
+        <div class="trending">
+          <div class="trending card">
+            <div class="avatar small">
+              <img
+                src="./julian-wan-WNoLnJo7tS8-unsplash.jpg"
+                alt="avatar photo"
+              />
+            </div>
+            <div class="avatar-ext">
+              <div class="username"></div>
+              <div class="name"></div>
+            </div>
           </div>
-        </div>
-        <div class="trending-card">
-          <div class="avatar"></div>
-          <div class="avatar-text">
-            <div class="username"></div>
-            <div class="name"></div>
+          <div class="trending card">
+            <div class="avatar small">
+              <img
+                src="./julian-wan-WNoLnJo7tS8-unsplash.jpg"
+                alt="avatar photo"
+              />
+            </div>
+            <div class="avatar-text">
+              <div class="username"></div>
+              <div class="name"></div>
+            </div>
+          </div>
+          <div class="trending card">
+            <div class="avatar small">
+              <img
+                src="./julian-wan-WNoLnJo7tS8-unsplash.jpg"
+                alt="avatar photo"
+              />
+            </div>
+            <div class="avatar-text">
+              <div class="username"></div>
+              <div class="name"></div>
+            </div>
+          </div>
+          <div class="trending card">
+            <div class="avatar small">
+              <img
+                src="./julian-wan-WNoLnJo7tS8-unsplash.jpg"
+                alt="avatar photo"
+              />
+            </div>
+            <div class="avatar-text">
+              <div class="username"></div>
+              <div class="name"></div>
+            </div>
           </div>
         </div>
       </div>
