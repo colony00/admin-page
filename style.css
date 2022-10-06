@@ -16,7 +16,7 @@ html {
 .view {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 1fr 8fr;
+  grid-template-rows: repeat(2, auto) 1fr;
   grid-template-areas:
     "title searchbar"
     "dashboard welcome-box"
@@ -42,7 +42,9 @@ html {
 .dashboard {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 1fr) 2fr repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto) 1fr repeat(2, auto) 8fr;
+  gap: 10px;
+  padding-left: 20px;
 }
 /* Grid Project-container */
 .project-container {
@@ -80,16 +82,33 @@ html {
 .trending {
   grid-area: trending;
 }
+
+.trending {
+  padding: 10px;
+}
+.trending.card {
+  display: flex;
+  gap: 5px;
+}
+
 /* Grid Welcome-box */
 .welcome-box {
   display: grid;
-  grid-template-columns: 1fr 5fr 3fr;
+  grid-template-columns: auto 5fr auto;
   gap: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+  align-items: center;
 }
 /* Grid Searchbar */
 .searchbar {
   display: grid;
-  grid-template-columns: 1fr 7fr 1fr 2fr 4fr;
+  grid-template-columns: auto 1fr repeat(3, auto);
+  gap: 10px;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-items: left;
 }
 
 /* Making things look nice */
@@ -99,17 +118,27 @@ html {
 }
 button {
   background: var(--blue);
-  border-radius: 20%;
+  border-radius: 20px;
   color: white;
+  height: 3rem;
+  width: 5rem;
+  border: none;
+}
+.welcome-message p {
+  font-weight: bold;
 }
 .project p {
   font-size: small;
   overflow: hidden;
 }
 .announcements p,
-.trending p {
+.name {
   font-size: x-small;
   overflow: hidden;
+}
+.username {
+  font-size: smaller;
+  font-weight: bold;
 }
 .content-container {
   background: lightgray;
@@ -127,6 +156,19 @@ h4,
 h5 {
   margin-bottom: 0;
 }
+.announcements > div:nth-child(1) > h5 {
+  margin-top: 10px;
+}
+.announce.card {
+  padding: 0 5px;
+}
+input {
+  width: clamp(200px, 100%, 700px);
+  min-height: 2rem;
+  border-radius: 25px;
+  border: none;
+  background: lightgrey;
+}
 p {
   margin-top: 0;
 }
@@ -141,10 +183,14 @@ p {
 .large img {
   width: calc(2 * var(--avatar-size));
 }
+.dashboard {
+  font-size: large;
+}
 
 /* Symbols */
 #title::before {
   content: "📅";
+  margin-left: 10px;
 }
 .home::before {
   content: "🏠";
@@ -175,4 +221,7 @@ p {
 }
 .magnifying-glass::before {
   content: "🔍";
+}
+.bell::before {
+  content: "🔔";
 }
